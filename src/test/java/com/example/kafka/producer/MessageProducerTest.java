@@ -32,7 +32,7 @@ public class MessageProducerTest {
         Producer<String, String> producer = new KafkaProducer<>(props);
 
         // Send
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10000; i++) {
             producer.send(new ProducerRecord<>("test", Integer.toString(i), Integer.toString(i)));
         }
 
